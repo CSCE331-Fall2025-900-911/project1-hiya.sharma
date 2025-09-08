@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiya Sharma | Cyber Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* Global Styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Neon Glow Header */
+  header {
+    background: #111;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff inset;
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #8ff;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  nav a {
+    text-decoration: none;
+    color: #0ff;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #f0f;
+    text-shadow: 0 0 10px #f0f;
+  }
+
+  .nav-arrow {
+    color: #0ff;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .nav-arrow:hover {
+    color: #f0f;
+    text-shadow: 0 0 10px #f0f;
+  }
+
+  /* Section Styling */
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #0ff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0ff;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  section p, li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  /* Contact */
+  .contact-info a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+  }
+
+  /* Cards for Experience & Projects */
+  .card {
+    background: #111;
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px #0ff;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #f0f;
+  }
+  .card h3 {
+    color: #0ff;
+    margin-bottom: 0.5rem;
+  }
+  .card ul {
+    list-style: disc inside;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    border-top: 2px solid #0ff;
+    margin-top: 4rem;
+  }
+  footer a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+  }
+
+  /* Animations */
+  @keyframes glitch {
+    0% { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+    25% { text-shadow: -2px 0 #0ff, 2px 0 #f0f; }
+    50% { text-shadow: 2px 0 #f0f, -2px 0 #0ff; }
+    75% { text-shadow: -2px 0 #f0f, 2px 0 #0ff; }
+    100% { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+  }
+  .glitch {
+    animation: glitch 1.5s infinite;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="glitch">Hiya Sharma</h1>
+  <p>Computer Science Honors | Software Engineering, AI, Cloud & Data Systems</p>
+  <nav>
+    <a href="index.html">Profile Page</a>
+    <a href="resume.html" class="nav-arrow">Resume</a>
+    <a href="qualifications.html" class="nav-arrow">Qualifications</a>
+    <a href="service.html" class="nav-arrow">Service</a>
+    <a href="gen-ai.html" class="nav-arrow">Gen-AI</a>
+  </nav>
+</header>
+
+<p>This is a description of Hiya Sharma’s qualifications!</p>
+
+<p>
+Hiya Sharma is a Computer Science Honors student with a strong foundation in software engineering, data science, 
+cloud computing, and AI systems. She has experience working across multiple domains, from backend engineering 
+and cloud infrastructure to applied machine learning and generative AI. Through internships, research projects, 
+and academic achievements, she has consistently demonstrated technical expertise, adaptability, and leadership 
+in solving complex problems. Hiya combines rigorous technical skills with creativity, communication, and 
+collaboration—key qualities that make her well-prepared for challenges in both academic and professional environments.
+</p>
+
+<h1>Qualifications</h1>
+<ul>
+  <li><b>Education:</b> <i>Honors Bachelor of Science in Computer Science, Minor in Business (Texas A&M University, GPA: 3.9/4.0)</i></li>
+  <li><b>Technical Skills:</b> <i>Python, Java, C++, R, SQL, JavaScript, Bash, HTML/CSS, Git, Docker, AWS, GCP, TensorFlow, PyTorch, React</i></li>
+  <li><b>Cloud & AI Expertise:</b> <i>Deployed scalable microservices, integrated OpenAI-powered RAG pipelines, real-time analytics, anomaly detection models, and blockchain-based systems</i></li>
+  <li><b>Professional Experience:</b> <i>Software Engineer Intern at Amazon Web Services and Gavii; Sustainability Software Engineer Intern at AgriLife; Researcher in Data Integration Visualization at Texas A&M</i></li>
+  <li><b>Projects:</b> <i>Enterprise data optimization, deep learning pipelines, interactive Tableau dashboards, and 3D modeling/visualization with Autodesk Maya</i></li>
+  <li><b>Achievements:</b> <i>Research published at the International Conference on Artificial Intelligence and Robotics (ICAIR 2025, Italy)</i></li>
+  <li><b>Core Attributes:</b> <i>Problem-solving, adaptability, collaboration, mentorship, and strong communication skills</i></li>
+</ul>
+
+
+<!-- a title of your choosing
+
+ 1 Bulbasaur , 39, Jigglypuff, cubone 104, 418 
+an image of your choosing
+a paragraph text consisting of a question of your choosing that you would like to ask your table members about themselves 
+a bulleted list of your other table members' names and their answers to that question -->

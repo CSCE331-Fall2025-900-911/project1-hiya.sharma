@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiya Sharma | Cyber Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* Global Styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Neon Glow Header */
+  header {
+    background: #111;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff inset;
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #8ff;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  nav a {
+    text-decoration: none;
+    color: #0ff;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #f0f;
+    text-shadow: 0 0 10px #f0f;
+  }
+
+  .nav-arrow {
+    color: #0ff;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .nav-arrow:hover {
+    color: #f0f;
+    text-shadow: 0 0 10px #f0f;
+  }
+
+  /* Section Styling */
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #0ff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0ff;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  section p, li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  /* Contact */
+  .contact-info a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+  }
+
+  /* Cards for Experience & Projects */
+  .card {
+    background: #111;
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px #0ff;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #f0f;
+  }
+  .card h3 {
+    color: #0ff;
+    margin-bottom: 0.5rem;
+  }
+  .card ul {
+    list-style: disc inside;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    border-top: 2px solid #0ff;
+    margin-top: 4rem;
+  }
+  footer a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+  }
+
+  /* Animations */
+  @keyframes glitch {
+    0% { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+    25% { text-shadow: -2px 0 #0ff, 2px 0 #f0f; }
+    50% { text-shadow: 2px 0 #f0f, -2px 0 #0ff; }
+    75% { text-shadow: -2px 0 #f0f, 2px 0 #0ff; }
+    100% { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+  }
+  .glitch {
+    animation: glitch 1.5s infinite;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="glitch">Hiya Sharma</h1>
+  <p>Computer Science Honors | Software Engineering, AI, Cloud & Data Systems</p>
+  <nav>
+    <a href="index.html">Profile Page</a>
+    <a href="resume.html" class="nav-arrow">Resume</a>
+    <a href="qualifications.html" class="nav-arrow">Qualifications</a>
+    <a href="service.html" class="nav-arrow">Service</a>
+    <a href="gen-ai.html" class="nav-arrow">Gen-AI</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Hiya Sharma, a Computer Science Honors student at Texas A&M University with a passion for cloud systems, AI, and data engineering. I love designing high-performance backend systems, exploring ML/NLP pipelines, and building interactive dashboards to turn complex data into actionable insights.</p>
+  <p>Education: Texas A&M University (BSc Computer Science, Minor in Business) | GPA: 3.9/4.0 | Graduation: Dec 2026</p>
+  <p>Relevant Coursework: Data Structures, Machine Learning, Probability & Statistics, Database Systems, Operating Systems, Algorithms</p>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Amazon Web Services Cloud Reachback Cohort</h3>
+    <p><strong>Software Engineer Intern | Aug 2025 – Present | Plano, TX</strong></p>
+    <ul>
+      <li>Engineered production-ready backend (AWS Lambda, DynamoDB) handling 50K+ queries with 99.9% uptime.</li>
+      <li>Automated deployment of 12+ microservices, cutting manual setup time by 40%.</li>
+      <li>Integrated OpenAI RAG pipelines for intelligent agent workflows, reducing engineering overhead by 270+ hours.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Sustainability Software Engineer Intern</h3>
+    <p><strong>AgriLife | Apr 2025 – Present | College Station, TX</strong></p>
+    <ul>
+      <li>Built real-time AI-powered dashboards processing data from 1,200+ IoT sensors.</li>
+      <li>Developed anomaly detection models with 92% accuracy, reducing downtime by 37%.</li>
+      <li>Integrated Blockchain, PLT, ABM, and Digital Twins for tamper-proof pipelines across 5+ livestock networks.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Data Integration Visualization Researcher</h3>
+    <p><strong>Texas A&M | Aug 2024 – May 2025</strong></p>
+    <ul>
+      <li>Applied dimensionality reduction to cut dataset size by 40% and improve generalization by 19%.</li>
+      <li>Optimized 3D classification spatial learning, boosting accuracy by 11%.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>Toyota Data Optimization & Deep Learning Integration</h3>
+    <ul>
+      <li>Optimized enterprise pipelines, improving data processing efficiency by 16%.</li>
+      <li>Automated ETL workflows, reducing testing by 50% and ensuring 99% data accuracy.</li>
+      <li>Delivered interactive Tableau dashboards and CI/CD automation via GitHub Actions.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>3D Modeling & Visualization</h3>
+    <ul>
+      <li>Designed 3D models and visualizations in Autodesk Maya, improving stakeholder comprehension by 30%.</li>
+      <li>Optimized rendering workflows, cutting model processing time by 15% while maintaining accuracy.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="card">
+    <h3>Malware Detection with Deep Neural Architectures and Channel Attention</h3>
+    <p>Accepted at International Conference on Artificial Intelligence and Robotics (ICAIR 2025), Italy</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="contact-info">
+    Phone: 562-774-8328 <br>
+    Email: <a href="mailto:sharmahiya1234@gmail.com">sharmahiya1234@gmail.com</a> <br>
+    LinkedIn: <a href="https://linkedin.com/in/hiyasharma" target="_blank">linkedin.com/in/hiyasharma</a> <br>
+    GitHub: <a href="https://github.com/hiya-s" target="_blank">github.com/hiya-s</a>
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Hiya Sharma | Built</p>
+</footer>
+
+</body>
+</html>
