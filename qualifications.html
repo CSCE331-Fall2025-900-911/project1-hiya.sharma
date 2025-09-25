@@ -17,13 +17,13 @@
     }
 
     .label {
-      background: rgba(255, 255, 255, 0.08); /* soft see-through box */
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       padding: 1rem;
       border-radius: 10px;
       font-size: 0.95rem;
       line-height: 1.5;
-      color: #eaeaea; /* makes text easy to read */
+      color: #eaeaea;
       transition: transform 0.2s ease, background 0.3s ease;
     }
 
@@ -42,6 +42,27 @@
       margin-top: 2rem;
       font-size: 1.5rem;
       color: #fff;
+    }
+
+    /* 🌞 Sunshine theme override */
+    body.sunshine .label {
+      background: #fff7c2;       /* warm, light yellow card */
+      border: 1px solid #e0c341;
+      color: #222;               /* dark text for readability */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    body.sunshine .label:hover {
+      background: #ffe97a;
+      transform: translateY(-3px);
+    }
+
+    body.sunshine section p {
+      color: #333; /* dark readable body text */
+    }
+
+    body.sunshine h2 {
+      color: #111;
     }
   </style>
 </head>
@@ -103,3 +124,4 @@
 </body>
 
 </html>
+  
