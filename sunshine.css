@@ -105,17 +105,4 @@ ul li {
   color: #fff;
 }
 
-.sunshine .label {
-  background: #f1f1f1;              
-  border: 1px solid #bbb;           
-  color: #111;                      
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15); 
-  border-radius: 8px;
-  padding: 12px;
-}
-
-.sunshine .label:hover {
-  background: #e4e4e4;            
-  transform: translateY(-3px);
-}
 
