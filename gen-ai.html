@@ -5,104 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hiya Sharma | Cyber Portfolio</title>
 
-  <!-- keep the Google Fonts link -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- link to your external stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Stylesheet -->
+  <link id="theme-style" rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cyber">
 
-   <header>
-  <h1 class="glitch">Hiya Sharma</h1>
-  <p>Computer Science Honors | Software Engineering, AI, Cloud & Data Systems</p>
-  <nav>
-    <a href="index.html">Profile Page</a>
-    <a href="resume.html" class="nav-arrow">Resume</a>
-    <a href="qualifications.html" class="nav-arrow">Qualifications</a>
-    <a href="service.html" class="nav-arrow">Service</a>
-    <a href="gen-ai.html" class="nav-arrow">Gen-AI</a>
-  </nav>
-</header>
+  <!-- Main wrapper like other pages -->
+  <main>
+    <header>
+      <h1 class="glitch">Hiya Sharma</h1>
+      <p>Computer Science Honors | Software Engineering, AI, Cloud & Data Systems</p>
 
+      <nav>
+        <a href="index.html">Profile Page</a>
+        <a href="resume.html" class="nav-arrow">Resume</a>
+        <a href="qualifications.html" class="nav-arrow">Qualifications</a>
+        <a href="service.html" class="nav-arrow">Service</a>
+        <a href="gen-ai.html" class="nav-arrow">Gen-AI</a>
+      </nav>
 
-<canvas id="matrix"></canvas>
+      <div class="style-toggle">
+        <button id="toggle-style">☀️ Sunshine</button>
+      </div>
+    </header>
 
-<div class="terminal">
-  <h1>SECURE PORTAL</h1>
-  <p>> ENTER ENCRYPTION KEY TO ACCESS:</p>
-  <p>> <input id="keyInput" placeholder="Type your key..." autofocus></p>
-  <div id="status"></div>
+    <!-- Gen-AI Portal Content -->
+    <section>
+      <canvas id="matrix"></canvas>
 
-  <!-- <div class="nav-links" id="navLinks">
-    <p>Access Granted. Available Commands:</p>
-    <a href="index.html">Profile Page</a>
-    <a href="resume.html">Resume</a>
-    <a href="qualifications.html">Qualifications</a>
-    <a href="service.html">Service</a>
-    <a href="gen-ai.html">Gen-AI</a>
-  </div> -->
-</div>
+      <div class="terminal">
+        <h2>SECURE PORTAL</h2>
+        <p>> ENTER ENCRYPTION KEY TO ACCESS:</p>
+        <p>> <input id="keyInput" placeholder="Type your key..." autofocus></p>
+        <div id="status"></div>
+      </div>
+    </section>
+  </main>
 
-<script>
-  // Matrix effect
-  const canvas = document.getElementById('matrix');
-  const ctx = canvas.getContext('2d');
+  <footer>
+    <p>&copy; 2025 Hiya Sharma | Built</p>
+  </footer>
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  <!-- Matrix & Portal Script -->
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
 
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}<>?/|';
-  const fontSize = 16;
-  const columns = canvas.width / fontSize;
-
-  const drops = Array.from({length: columns}).map(() => 1);
-
-  function drawMatrix() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = '#0ff';
-    ctx.font = fontSize + 'px Share Tech Mono';
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters.charAt(Math.floor(Math.random() * letters.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-
-  setInterval(drawMatrix, 50);
-
-  window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-  });
 
-  // Interactive encryption key
-  const input = document.getElementById('keyInput');
-  const status = document.getElementById('status');
-  const navLinks = document.getElementById('navLinks');
-  const correctKey = "CYBER123"; // You can change the secret key here
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}<>?/|';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
 
-  input.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      const value = input.value.trim();
-      if(value === correctKey) {
-        status.innerHTML = '<p class="encrypted">Decrypting... Access Granted.</p>';
-        navLinks.style.display = 'block';
-      } else {
-        status.innerHTML = '<p class="encrypted">ACCESS DENIED. INVALID KEY.</p>';
-        navLinks.style.display = 'none';
+    const drops = Array.from({ length: columns }).map(() => 1);
+
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0ff';
+      ctx.font = fontSize + 'px Share Tech Mono';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
       }
-      input.value = '';
     }
-  });
-</script>
 
+    setInterval(drawMatrix, 50);
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // Encryption Key Logic
+    const input = document.getElementById('keyInput');
+    const status = document.getElementById('status');
+    const correctKey = "CYBER123"; // Secret key
+
+    input.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const value = input.value.trim();
+        if (value === correctKey) {
+          status.innerHTML = '<p class="encrypted">Decrypting... Access Granted.</p>';
+        } else {
+          status.innerHTML = '<p class="encrypted">ACCESS DENIED. INVALID KEY.</p>';
+        }
+        input.value = '';
+      }
+    });
+  </script>
 </body>
 </html>
